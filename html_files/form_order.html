@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="../css_files/form_order.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Order Form</h2>
+        <form action="submit-order.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            
+
+            <label for="menuItem">Select Menu Item:</label>
+            <select id="menuItem" name="menuItem">
+                <option value="">Select an item</option>
+                <option value="Appetizer 1 - $10">Appetizer 1 - $10</option>
+                <option value="Appetizer 2 - $12">Appetizer 2 - $12</option>
+                <option value="Main Course 1 - $20">Main Course 1 - $20</option>
+                <option value="Main Course 2 - $22">Main Course 2 - $22</option>
+                <option value="Dessert 1 - $8">Dessert 1 - $8</option>
+                <option value="Dessert 2 - $10">Dessert 2 - $10</option>
+            </select>
+
+            <div class="checkbox">
+                <input type="checkbox" id="includeItems" name="includeItems">
+                <label for="includeItems">Include items in order</label>
+            </div>
+
+            
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>
